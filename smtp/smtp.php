@@ -25,6 +25,9 @@ function zms_mail_smtp($host, $port, $from, $password, $to, $m){
 	smtp_fputs($fp,"\r\n.\r\n");
 	smtp_get_response($fp);
 	smtp_fputs($fp, "QUIT\r\n");
+	smtp_get_response($fp);
+	smtp_get_response($fp);
+	smtp_get_response($fp);
 	fclose($fp);
 }
 
